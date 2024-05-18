@@ -1,0 +1,278 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: black;
+    background-image: url(Stress.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+   }
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content:hover{
+    color: aqua;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 10px 0 0;
+    padding: 0; 
+    text-align: center;
+   
+    
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px ;
+    
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 100px;
+    
+}
+
+nav ul li a.active {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+main {
+    padding: 20px;
+    z-index: 1;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer:hover{
+    color: aqua;
+}
+footer p {
+    margin: 5px 0;
+}
+
+/* Media query for smaller devices */
+@media only screen and (max-width: 600px) {
+    header, main, footer {
+        padding: 10px;
+    }
+
+    nav ul {
+        display: none; /* Hide the navigation menu by default */
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: block; /* Show the navigation menu when the show class is added */
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Style the menu toggle button */
+    .menu-toggle {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 10px auto; /* Center the button */
+    }
+}
+.menu-toggle {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-toggle:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange children horizontally */
+     padding: 20px;
+}
+
+
+.left-half,
+.right-half {
+    flex: 5; /* Each element takes up equal space */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.left-half {
+    background-color: white; /* Background color for the left half */
+}
+
+.right-half {
+    background-color: white; /* Background color for the right half */
+}
+
+img {
+    max-width: 100%; /* Ensure image does not exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #555;
+}
+
+#portfolio {
+    margin-top: 20px;
+}
+.portfolio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.portfolio h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.portfolio-item:nth-child(3) {
+    grid-column: 1 / -1; /* Span both columns */
+}
+.portfolio-item h3 {
+    margin: 0 0 10px 0;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.navbar{
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the nav items */
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.navbar nav ul li a.active, .navbar nav ul li a:hover {
+    color: purple;
+    background-color: black;
+    border-radius: 4px;
+}
+
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+    background-color: #007bff;
+    display: block;
+    margin: 20px auto;
+}
+/* Media query for smaller devices */
+@media only screen and (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* One column on small screens */
+    }
+}
